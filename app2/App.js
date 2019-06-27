@@ -1,49 +1,43 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
-  }
+// eslint-disable-next-line react/prefer-stateless-function
+export default class App extends Component {
+    // eslint-disable-next-line class-methods-use-this
+    render() {
+        return (
+        // eslint-disable-next-line react/jsx-filename-extension
+            <View style={estilo.container}>
+                <View style={estilo.box} />
+                <View style={estilo.box} />
+                <View style={estilo.box} />
+                <View style={estilo.box} />
+            </View>
+        );
+    }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+const estilo = StyleSheet.create({
+    container: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: '#CCC',
+        flexWrap: 'wrap',
+        alignContent: 'space-between',
+    },
+    box: {
+        flex: 1,
+        height: 100,
+        minWidth: 100,
+        width: 100,
+        backgroundColor: '#666',
+        borderColor: '#999',
+        borderWidth: 5,
+        margin: 10,
+    },
+    // eslint-disable-next-line no-dupe-keys
+    box1: {
+        alignSelf: 'flex-end',
+    },
 });
