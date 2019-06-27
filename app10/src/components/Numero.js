@@ -3,7 +3,9 @@ import {TextInput, StyleSheet} from 'react-native';
 
 
 export default props => (
-    <TextInput style={styles.numero} keyboardType={'numeric'} value={props.num}/>
+    <TextInput style={styles.numero} keyboardType={'numeric'} value={props.num.toString()}
+    onChangeText={(text)=> {props.onChangeTextHandler(props.nome, parseFloat (text))}} />
+
 )
 
 const styles = StyleSheet.create({

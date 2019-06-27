@@ -7,6 +7,12 @@ import Comando from './Comando';
 
 export const Painel = props => {
 
+    const [selecionado, setSelecionado] = useState(0);
+
+    const selectedHandle = (item) => {
+        setSelecionado(item);
+    }
+
     const [numero1, setNumero1] = useState(0);
     const [numero2, setNumero2] = useState(0);
 
@@ -22,7 +28,7 @@ export const Painel = props => {
         <View>
             <Entrada num1={numero1} num2={numero2} onChangeTextHandler={onChangeTextHandler} />
             <Comando /> 
-            <Operacao />
+            <Operacao selecionado={selecionado}  onValueChangeHandler={selectedHandle}/>
         </View>
     );
 };
