@@ -3,7 +3,7 @@ import {TextInput, StyleSheet} from 'react-native';
 
 
 export default props => (
-    <TextInput keyboardType={'numeric'} value={props.num}/>
+    <TextInput style={styles.numero} keyboardType={'numeric'} value={props.num}/>
 )
 
 const styles = StyleSheet.create({
