@@ -15,6 +15,8 @@ export const Painel = props => {
 
     const [numero1, setNumero1] = useState(0);
     const [numero2, setNumero2] = useState(0);
+    const [selecionado, setSelecionado] = useState(0);
+    const [seComando, Comando] = useState(0);
 
     const onChangeTextHandler = (nomeCampo, valor) =>{
         if(nomeCampo === 'num1') {
@@ -24,10 +26,23 @@ export const Painel = props => {
         }
     }
 
+    const calculate = () =>{
+        let Comando = 0;
+        if(selecionado === 1) {
+            const soma = parseFloat(numero1) + parseFloat(numero2);
+        }else if(selecionado ===2) {
+            Comando = parseFloat(numero1) - parseFloat(numero2);
+        }else {
+            Comando = 'error';
+        }
+
+        setResultado(resultado);
+    }
+
     return (
         <View>
             <Entrada num1={numero1} num2={numero2} onChangeTextHandler={onChangeTextHandler} />
-            <Comando /> 
+            <Comando calcular ={calculate} /> 
             <Operacao selecionado={selecionado}  onValueChangeHandler={selectedHandle}/>
         </View>
     );
