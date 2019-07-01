@@ -6,6 +6,8 @@ export default props => (
     <View style={styles.numeros}>
         <Numero num={props.num1} onChangeTextHandler={props.onChangeTextHandler} nome='num1'/>
         <Numero num={props.num2} onChangeTextHandler={props.onChangeTextHandler} nome='num2'/>
+        <Numero num={props.num3} onChangeTextHandler={props.onChangeTextHandler} nome='num3'/>
+        <Numero num={props.num4} onChangeTextHandler={props.onChangeTextHandler} nome='num4'/>
     </View>
 )
 

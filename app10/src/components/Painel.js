@@ -41,7 +41,7 @@ export const Painel = props => {
 
     return (
         <View>
-            <Entrada num1={numero1} num2={numero2} onChangeTextHandler={onChangeTextHandler} />
+            <Entrada num1={numero1} num2={numero2} num3={numero3} num4={numero4} onChangeTextHandler={onChangeTextHandler} />
             <Comando calcular ={calculate} /> 
             <Operacao selecionado={selecionado}  onValueChangeHandler={selectedHandle}/>
         </View>
