@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import Entrada from './Entrada';
 import Operacao from './Operacao';
 import Comando from './Comando';
+import Numero from './Numero';
 
 
 export const Painel = props => {
@@ -15,6 +16,8 @@ export const Painel = props => {
 
     const [numero1, setNumero1] = useState(0);
     const [numero2, setNumero2] = useState(0);
+    const [numero3, setNumero3] = useState(0);
+    const [numero4, setNumero4] = useState(0);
     const [selecionado, setSelecionado] = useState(0);
   
 
@@ -23,6 +26,10 @@ export const Painel = props => {
             setNumero1(valor);
         } else if (nomeCampo === 'num2') {
             setNumero2(valor);
+        }else if (nomeCampo === 'num3') {
+            setNumero3(valor);
+        }else if (nomeCampo === 'num4') {
+            setNumero4(valor);
         }
     }
 
@@ -32,7 +39,12 @@ export const Painel = props => {
             resultado = parseFloat(numero1) + parseFloat(numero2);
         }else if(selecionado ===2) {
             resultado = parseFloat(numero1) - parseFloat(numero2);
-        }else {
+        }else if(selecionado ===3) {
+            resultado = parseFloat(numero3) . parseFloat(numero3);
+        }else if(selecionado ===4){
+            resultado = parseFloat(numero4) = parseFloat(numero4)
+        }
+            {
             resultado = 'error';
         }
 
