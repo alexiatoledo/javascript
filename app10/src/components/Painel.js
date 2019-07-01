@@ -27,16 +27,16 @@ export const Painel = props => {
     }
 
     const calculate = () =>{
-        let Comando = 0;
+        let resultado = 0;
         if(selecionado === 1) {
-            const soma = parseFloat(numero1) + parseFloat(numero2);
+            resultado = parseFloat(numero1) + parseFloat(numero2);
         }else if(selecionado ===2) {
-            Comando = parseFloat(numero1) - parseFloat(numero2);
+            resultado = parseFloat(numero1) - parseFloat(numero2);
         }else {
-            Comando = 'error';
+            resultado = 'error';
         }
 
-        setResultado(resultado);
+        props.resultadoVisor(comando);
     }
 
     return (
