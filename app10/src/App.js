@@ -5,11 +5,17 @@ import { Painel, Resultado, Topo } from './components';
 
 export default class App extends Component {
  
+  constructor(props) {
+    super(props);
+    this.state = {
+      resultado: 0,
+    }
+  }
   render() {
     return (
       <View>
         <Topo />
-        <Resultado />
+        <Resultado resultado={resultado}/>
         <Painel />
       </View>
     );
