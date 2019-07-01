@@ -16,7 +16,7 @@ export const Painel = props => {
     const [numero1, setNumero1] = useState(0);
     const [numero2, setNumero2] = useState(0);
     const [selecionado, setSelecionado] = useState(0);
-    const [seComando, Comando] = useState(0);
+  
 
     const onChangeTextHandler = (nomeCampo, valor) =>{
         if(nomeCampo === 'num1') {
